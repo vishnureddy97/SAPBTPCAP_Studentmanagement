@@ -1,0 +1,61 @@
+<mvc:View controllerName="com.studentmanagement.studentmanagement.controller.studentview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:table="sap.ui.table"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core"
+	xmlns:p="sap.m.plugins">
+    <Page id="page" title="{i18n>title}">
+        <content>
+			<Button text="Create" press="onCreate" />
+			<Button text="Update" press="onUpdate" />
+			<Button text="Delete" press="onDeleteStudent" />
+			<table:Table
+				rows="{/Students}"
+				id="student_table"
+				selectionMode="MultiToggle"
+				paste="onPaste"
+				ariaLabelledBy="title">
+				<table:columns>
+					<table:Column width="11rem">
+						<Label text="Id" />
+						<table:template>
+                            <Text text="{ID}" wrapping="false" />
+							<!-- <Input value="{ID}"/> -->
+						</table:template>
+					</table:Column>
+                    <table:Column width="11rem">
+						<Label text="First Name" />
+						<table:template>
+                            <Text text="{firstName}" wrapping="false" />
+						</table:template>
+					</table:Column>
+                    <table:Column width="11rem">
+						<Label text="Last Name" />
+						<table:template>
+							<Text text="{lastName}" wrapping="false" />
+						</table:template>
+					</table:Column>
+                    <table:Column width="11rem">
+						<Label text="Email" />
+						<table:template>
+							<Text text="{email}" wrapping="false" />
+						</table:template>
+					</table:Column>
+                    <table:Column width="11rem">
+						<Label text="Age" />
+						<table:template>
+							<Text text="{age}" wrapping="false" />
+						</table:template>
+					</table:Column>
+                    <table:Column width="11rem">
+						<Label text="Created Date" />
+						<table:template>
+							<Text text="{createdAt}" wrapping="false" />
+						</table:template>
+					</table:Column>
+				</table:columns>
+			</table:Table>
+        </content>
+    </Page>
+</mvc:View>

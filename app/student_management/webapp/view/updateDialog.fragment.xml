@@ -1,0 +1,54 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core"
+   xmlns:l="sap.ui.layout"
+   xmlns:f="sap.ui.layout.form">
+    <Dialog
+      id="updateDialog"
+      title ="Update Student">
+      <VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChange355"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Address"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Id" />
+				<Input id="student_id_up" value="{editModel>/ID}" />
+                <Label text="First Name" />
+				<Input id="firstname_up" value="{editModel>/firstName}" />
+                <Label text="Last Name" />
+				<Input id="lastname_up" value="{editModel>/lastName}" />
+                <Label text="Email" />
+				<Input id="email_up" value="{editModel>/email}" />
+                <Label text="Age" />
+				<Input id="age_up" value="{editModel>/age}" />
+                <Label text="Created At" />
+				<Input id="createdat_up" value="{editModel>/createdAt}" />
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+      <beginButton>
+         <Button
+            text="Update"
+            press=".onSaveEdit"/>
+      </beginButton>
+      <endButton>
+         <Button
+            text="Close"
+            press=".onCloseDialog_update"/>
+      </endButton>
+   </Dialog>
+</core:FragmentDefinition>
