@@ -12,10 +12,14 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-student_management": "cds watch --open com.studentmanagement.studentmanagement/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-student_management": "cds watch --open com.studentmanagement.studentmanagement/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-cap_listreport": "cds watch --open caplistreport/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "workspaces": [
     "app/*"
+  ],
+  "sapux": [
+    "app/cap_listreport"
   ]
 }
